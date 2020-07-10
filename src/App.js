@@ -174,7 +174,7 @@ class App extends Component {
 						<img src={this.state.qr} />
 						<br/>
 						<br/>
-						<button className='btn btn-secondary' onClick={this.openTab.bind(this)}>Open in Separate Tab</button>
+						<button style={{border:'1px solid black'}} className='btn btn-default' onClick={this.openTab.bind(this)}>Open in Separate Tab</button>
 						<p>( Test with Camera App )</p>
 					</div>
 					}
