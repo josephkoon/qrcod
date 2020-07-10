@@ -3,6 +3,11 @@ import axios from 'axios'
 import { saveAs } from 'file-saver';
 
 
+import coupon from'./usecase/coupon.jpg';
+import menu from'./usecase/menu.jpeg';
+import realestate from'./usecase/realestate.png';
+
+
 class App extends Component {
 
 	constructor(){
@@ -119,21 +124,20 @@ class App extends Component {
 
 
 		return (
-			<div style={{minHeight:'100vh', backgroundColor:'rgb(205, 240, 240)'}}>
-
-			<br/>
-			<br/>
+			<div style={{minHeight:'100vh', backgroundColor:'rgb(190, 200, 225)'}}>
 
 
-			<div style={{borderRadius:'8px', backgroundColor:'white'}} className='container'>
-			
+			<div style={{width:'100%', textAlign:'center'}}>
+				<i style={{padding:'20px', fontSize:'60px', color:'white'}} className="fas fa-qrcode"></i>
+			</div>
 
-			<div className='row'>
 
-				<div style={{paddingTop:'15px', paddingBottom:'9px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
-					<h4><i style={{fontSize:'14px'}} className="fas fa-qrcode"></i> QR CODER+</h4>
+
+			<div style={{borderRadius:'10px', backgroundColor:'white'}} className='container'>
+			<div style={{padding:'10px'}} className='row'>
+				<div style={{borderBottom:'1px solid lightgray', paddingTop:'10px', paddingBottom:'10px', color:'black'}} className='col-12'>
+					<h4>CREATE A QR CODE</h4>
 				</div>
-
 				<div className='col-sm-4'>
 					<br/>
 					<br/>
@@ -162,13 +166,14 @@ class App extends Component {
 
 					<hr/>
 					<br/>
-					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>CREATE MY QR !!</button>
+					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>GENERATE !!</button>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
 				</div>
 
 
 				<div style={{textAlign:'center'}} className='col-sm-8'>
+					<br/>
 					<br/>
 
 					{!this.state.qr &&
@@ -187,13 +192,43 @@ class App extends Component {
 						<p>(Test with a Camera App)</p>
 					</div>
 					}
-					
 					<br/>
 				</div>
-
-
 			</div>
 			</div>
+
+			<br/>
+
+
+			<div style={{borderRadius:'10px', backgroundColor:'white'}} className='container'>
+			<div style={{padding:'10px'}} className='row'>
+				<div style={{borderBottom:'1px solid lightgray', paddingTop:'10px', paddingBottom:'10px', color:'black'}} className='col-12'>
+					<h4>USE CASES</h4>
+				</div>
+
+				<div className='col-sm-4'>
+					<img style={{objectFit:'cover', height:'150px', width:'100%'}} src={coupon} />
+					<p>Scannable Coupons</p>
+				</div>
+
+				<div className='col-sm-4'>
+					<img style={{objectFit:'cover', height:'150px', width:'100%'}} src={realestate} />
+					<p>Instant Real Estate Tours</p>
+				</div>
+
+				<div className='col-sm-4'>
+					<img style={{objectFit:'cover', height:'150px', width:'100%'}} src={menu} />
+					<p>Touch-Free Digital Menus</p>
+				</div>
+			</div>
+			</div>
+
+			<br/>
+			<br/>
+			<br/>
+
+
+			
 			</div>
 		)
 	}
