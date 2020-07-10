@@ -166,7 +166,7 @@ class App extends Component {
 					<br/>
 
 					<hr/>
-					<button className='btn btn-lg btn-block btn-dark' onClick={this.getQR.bind(this)}>CREATE MY QR !</button>
+					<button className='btn btn-lg btn-block btn-primary' onClick={this.getQR.bind(this)}>CREATE MY QR !</button>
 					<br/>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
