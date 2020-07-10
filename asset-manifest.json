@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/qrcod/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/qrcod/static/js/main.1a282795.chunk.js",
-    "main.js.map": "/qrcod/static/js/main.1a282795.chunk.js.map",
+    "main.js": "/qrcod/static/js/main.879c7e16.chunk.js",
+    "main.js.map": "/qrcod/static/js/main.879c7e16.chunk.js.map",
     "runtime-main.js": "/qrcod/static/js/runtime-main.64ade749.js",
     "runtime-main.js.map": "/qrcod/static/js/runtime-main.64ade749.js.map",
     "static/js/2.8a3dd15e.chunk.js": "/qrcod/static/js/2.8a3dd15e.chunk.js",
     "static/js/2.8a3dd15e.chunk.js.map": "/qrcod/static/js/2.8a3dd15e.chunk.js.map",
     "index.html": "/qrcod/index.html",
-    "precache-manifest.6fe2d01aa96d80f18bb4c10a173bef4a.js": "/qrcod/precache-manifest.6fe2d01aa96d80f18bb4c10a173bef4a.js",
+    "precache-manifest.2a3a6d8ad4a85c2bb6624aa52b5dc7cc.js": "/qrcod/precache-manifest.2a3a6d8ad4a85c2bb6624aa52b5dc7cc.js",
     "service-worker.js": "/qrcod/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/qrcod/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.8a3dd15e.chunk.js.LICENSE.txt": "/qrcod/static/js/2.8a3dd15e.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.64ade749.js",
     "static/js/2.8a3dd15e.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.1a282795.chunk.js"
+    "static/js/main.879c7e16.chunk.js"
   ]
 }
