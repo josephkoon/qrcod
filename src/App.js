@@ -179,6 +179,7 @@ class App extends Component {
 					{!this.state.qr &&
 						<div style={{width:'100%'}}>
 							<div style={{display:'inline-block', height:this.state.size+'px', width:this.state.size+'px', border:'4px dashed black'}}></div>
+							<br/>
 						</div>
 					}
 
