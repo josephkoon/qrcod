@@ -122,8 +122,8 @@ class App extends Component {
 			<br/>
 
 			<div className='row'>
-				<div style={{paddingTop:'5px', borderBottom:'4px solid teal', backgroundColor:'black', color:'white'}} className='col-12'>
-					<h2><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h2>
+				<div style={{paddingTop:'5px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
+					<h3><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h3>
 				</div>
 
 				<div className='col-sm-6'>
@@ -166,7 +166,7 @@ class App extends Component {
 					<br/>
 
 					<hr/>
-					<button className='btn btn-lg btn-block btn-dark' onClick={this.getQR.bind(this)}>GENERATE MY QR !</button>
+					<button className='btn btn-lg btn-block btn-dark' onClick={this.getQR.bind(this)}>CREATE MY QR !</button>
 					<br/>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
