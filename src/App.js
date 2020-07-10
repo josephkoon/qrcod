@@ -16,7 +16,6 @@ class App extends Component {
 		this.state = {
 			qr:null,
 
-			color:'0-0-0',
 			data:'',
 
 			error:'',
@@ -33,7 +32,7 @@ class App extends Component {
 
 		let size = '300x300'
 		let data = this.state.data
-		let color = this.state.color
+		let color = '0-0-0'
 		let format = "png"
 		let margin = '10'
 
@@ -64,7 +63,7 @@ class App extends Component {
 	openTab() {
 		let size = '300x300'
 		let data = this.state.data
-		let color = this.state.color
+		let color = '0-0-0'
 		let format = "png"
 		let margin = '10'
 
@@ -123,6 +122,25 @@ class App extends Component {
 		}
 
 
+
+		// let colorSelector = (
+		// 	<br/>
+		// 	<br/>
+			
+		// 	<p>Pick a Color</p>
+		// 	<div class="dropdown show">
+		// 		<a class="btn btn-block btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		// 		{this.state.color}
+		// 		</a>
+		// 		<div style={{minWidth:'100%'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+		// 			<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">0-0-0 (Black)</span>
+		// 			<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">255-0-0 (Red)</span>
+		// 			<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">0-0-255 (Blue)</span>
+		// 		</div>
+		// 	</div>
+		// )
+
+
 		return (
 			<div style={{minHeight:'100vh', backgroundColor:'rgb(190, 200, 225)'}}>
 
@@ -146,25 +164,10 @@ class App extends Component {
 
 					<br/>
 					<br/>
-					
-					<p>Pick a Color</p>
-					<div class="dropdown show">
-						<a class="btn btn-block btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{this.state.color}
-						</a>
-						<div style={{minWidth:'100%'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">0-0-0 (Black)</span>
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">255-0-0 (Red)</span>
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">0-0-255 (Blue)</span>
-						</div>
-					</div>
 
-					<br/>
-					<br/>
-
-					<br/>
 					<button className='btn btn-lg btn-dark btn-block' onClick={this.getQR.bind(this)}>GENERATE !!</button>
 					<p style={{color:'red'}}>{this.state.error}</p>
+					<br/>
 					<br/>
 				</div>
 
@@ -188,6 +191,7 @@ class App extends Component {
 						<button className='btn btn-sm btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab <i style={{fontSize:'14px'}} className="fas fa-external-link-alt"></i></button>
 					</div>
 					}
+					<br/>
 					<br/>
 				</div>
 			</div>
