@@ -31,8 +31,10 @@ class App extends Component {
 		let color = this.state.color
 		let format = "png"
 
+		let margin = '10'
+
 		//DOCS: http://goqr.me/api/doc/create-qr-code/#param_format
-		let url = `http://api.qrserver.com/v1/create-qr-code/?data=${data}&size=${size}&format=${format}&color=${color}`
+		let url = `http://api.qrserver.com/v1/create-qr-code/?data=${data}&size=${size}&format=${format}&color=${color}&margin=${margin}`
 
 		this.setState({qr:url})
 	}
@@ -61,7 +63,9 @@ class App extends Component {
 		let color = this.state.color
 		let format = "png"
 
-		window.open(`http://api.qrserver.com/v1/create-qr-code/?data=${data}&size=${size}&format=${format}&color=${color}`)
+		let margin = '10'
+
+		window.open(`http://api.qrserver.com/v1/create-qr-code/?data=${data}&size=${size}&format=${format}&color=${color}&margin=${margin}`)
 	}
 
 
@@ -110,9 +114,9 @@ class App extends Component {
 	render(){
 
 
-		let errorStyle = {border:'1px solid gray'}
+		let errorStyle = {border:'2px solid gray'}
 		if(this.state.error){
-			errorStyle = {border:'1px solid red', backgroundColor:'rgb(255,0,0,.25)'}
+			errorStyle = {border:'2px solid red', backgroundColor:'rgb(255,0,0,.25)'}
 		}
 
 
