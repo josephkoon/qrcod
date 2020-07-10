@@ -20,6 +20,7 @@ class App extends Component {
 	}
 
 
+
 	getQR() {
 		if(!this.state.data){
 			this.setState({error:'A Link is Required'})
@@ -30,7 +31,6 @@ class App extends Component {
 		let data = this.state.data
 		let color = this.state.color
 		let format = "png"
-
 		let margin = '10'
 
 		//DOCS: http://goqr.me/api/doc/create-qr-code/#param_format
@@ -62,7 +62,6 @@ class App extends Component {
 		let data = this.state.data
 		let color = this.state.color
 		let format = "png"
-
 		let margin = '10'
 
 		window.open(`http://api.qrserver.com/v1/create-qr-code/?data=${data}&size=${size}&format=${format}&color=${color}&margin=${margin}`)
@@ -124,6 +123,7 @@ class App extends Component {
 			<div className='container'>
 			
 			<br/>
+			<br/>
 
 			<div className='row'>
 
@@ -147,8 +147,8 @@ class App extends Component {
 						{this.state.size}px
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<a onClick={()=>this.changeSize('250')} class="dropdown-item" href="#">250px</a>
-							<a onClick={()=>this.changeSize('500')} class="dropdown-item" href="#">500px</a>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeSize('250')} class="dropdown-item" href="#">250px</span>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeSize('500')} class="dropdown-item" href="#">500px</span>
 						</div>
 					</div>
 
@@ -161,9 +161,9 @@ class App extends Component {
 						{this.state.color}
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<a onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">(Black) 0-0-0</a>
-							<a onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">(Red) 255-0-0</a>
-							<a onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">(Blue) 0-0-255</a>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">(Black) 0-0-0</span>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">(Red) 255-0-0</span>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">(Blue) 0-0-255</span>
 						</div>
 					</div>
 
