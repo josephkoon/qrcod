@@ -128,9 +128,8 @@ class App extends Component {
 
 
 			<div style={{width:'100%', textAlign:'center'}}>
-				<i style={{padding:'20px', fontSize:'60px', color:'white'}} className="fas fa-qrcode"></i>
+				<i style={{padding:'20px', fontSize:'50px', color:'white'}} className="fas fa-qrcode"></i>
 			</div>
-
 
 
 			<div style={{borderRadius:'10px', backgroundColor:'white'}} className='container'>
@@ -144,7 +143,6 @@ class App extends Component {
 
 					<p>Paste a Link *</p>
 					<input style={errorStyle} placeholder='Link...' className='form-control' onChange={this.changeData.bind(this)}/>
-
 
 					<br/>
 					<br/>
@@ -178,7 +176,7 @@ class App extends Component {
 
 					{!this.state.qr &&
 						<div style={{width:'100%'}}>
-							<div style={{display:'inline-block', height:'300px', width:'300px', border:'4px dashed black'}}></div>
+							<div style={{display:'inline-block', height:'300px', width:'300px', border:'3px dashed black'}}></div>
 							<br/>
 						</div>
 					}
@@ -196,6 +194,7 @@ class App extends Component {
 				</div>
 			</div>
 			</div>
+
 
 			<br/>
 
@@ -226,7 +225,6 @@ class App extends Component {
 			<br/>
 			<br/>
 			<br/>
-
 
 			
 			</div>
