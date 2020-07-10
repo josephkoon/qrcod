@@ -168,6 +168,7 @@ class App extends Component {
 
 					<hr/>
 					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>CREATE MY QR !!</button>
+
 					<br/>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
@@ -175,6 +176,7 @@ class App extends Component {
 
 
 				<div style={{textAlign:'center'}} className='col-sm-6'>
+					<br/>
 					<br/>
 
 					{!this.state.qr &&
@@ -194,6 +196,7 @@ class App extends Component {
 					</div>
 					}
 					
+					<br/>
 					<br/>
 				</div>
 
