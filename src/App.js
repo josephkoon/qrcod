@@ -123,7 +123,7 @@ class App extends Component {
 
 			<div className='row'>
 				<div style={{paddingTop:'5px', backgroundColor:'black', color:'white'}} className='col-12'>
-					<h2>QR CODE GENERATOR</h2>
+					<h2><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h2>
 				</div>
 
 				<div className='col-sm-6'>
@@ -187,7 +187,7 @@ class App extends Component {
 						<img src={this.state.qr} />
 						<br/>
 						<br/>
-						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab</button>
+						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab <i style={{fontSize:'16px'}} className="fas fa-external-link-alt"></i></button>
 						<p>( Test with Camera App )</p>
 					</div>
 					}
