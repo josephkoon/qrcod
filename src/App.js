@@ -11,7 +11,6 @@ class App extends Component {
 		this.state = {
 			qr:null,
 
-			size:'250',
 			color:'0-0-0',
 			data:'',
 
@@ -27,13 +26,13 @@ class App extends Component {
 			return
 		}
 
-		let size = this.state.size + 'x' + this.state.size
+		let size = '300x300'
 		let data = this.state.data
 		let color = this.state.color
 		let format = "png"
 		let margin = '10'
 
-		//DOCS: http://goqr.me/api/doc/create-qr-code/#param_format
+		//DOCS: http://goqr.me/api/doc/create-qr-code/
 		let url = `http://api.qrserver.com/v1/create-qr-code/?data=${data}&size=${size}&format=${format}&color=${color}&margin=${margin}`
 
 		this.setState({qr:url})
@@ -58,7 +57,7 @@ class App extends Component {
 
 
 	openTab() {
-		let size = this.state.size + 'x' + this.state.size
+		let size = '300x300'
 		let data = this.state.data
 		let color = this.state.color
 		let format = "png"
@@ -120,15 +119,19 @@ class App extends Component {
 
 
 		return (
-			<div className='container'>
+			<div style={{minHeight:'100vh', backgroundColor:'rgb(205, 240, 240)'}}>
+
+			<br/>
+			<br/>
+
+
+			<div style={{borderRadius:'8px', backgroundColor:'white'}} className='container'>
 			
-			<br/>
-			<br/>
 
 			<div className='row'>
 
-				<div style={{paddingTop:'6px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
-					<h4><i style={{fontSize:'14px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h4>
+				<div style={{paddingTop:'15px', paddingBottom:'9px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
+					<h4><i style={{fontSize:'14px'}} className="fas fa-qrcode"></i> QR CODER+</h4>
 				</div>
 
 				<div className='col-sm-4'>
@@ -138,19 +141,6 @@ class App extends Component {
 					<p>Paste a Link *</p>
 					<input style={errorStyle} placeholder='Link...' className='form-control' onChange={this.changeData.bind(this)}/>
 
-					<br/>
-					<br/>
-
-					<p>Size (Pixels)</p>
-					<div class="dropdown show">
-						<a  style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{this.state.size}px
-						</a>
-						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeSize('250')} class="dropdown-item" href="#">250px</span>
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeSize('500')} class="dropdown-item" href="#">500px</span>
-						</div>
-					</div>
 
 					<br/>
 					<br/>
@@ -161,9 +151,9 @@ class App extends Component {
 						{this.state.color}
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">(Black) 0-0-0</span>
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">(Red) 255-0-0</span>
-							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">(Blue) 0-0-255</span>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">0-0-0 (Black)</span>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">255-0-0 (Red)</span>
+							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">0-0-255 (Blue)</span>
 						</div>
 					</div>
 
@@ -171,9 +161,8 @@ class App extends Component {
 					<br/>
 
 					<hr/>
-					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>CREATE MY QR !!</button>
-
 					<br/>
+					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>CREATE MY QR !!</button>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
 				</div>
@@ -181,11 +170,10 @@ class App extends Component {
 
 				<div style={{textAlign:'center'}} className='col-sm-8'>
 					<br/>
-					<br/>
 
 					{!this.state.qr &&
 						<div style={{width:'100%'}}>
-							<div style={{display:'inline-block', height:this.state.size+'px', width:this.state.size+'px', border:'4px dashed black'}}></div>
+							<div style={{display:'inline-block', height:'300px', width:'300px', border:'4px dashed black'}}></div>
 							<br/>
 						</div>
 					}
@@ -201,10 +189,10 @@ class App extends Component {
 					}
 					
 					<br/>
-					<br/>
 				</div>
 
 
+			</div>
 			</div>
 			</div>
 		)
