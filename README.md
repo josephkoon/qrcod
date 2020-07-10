@@ -1,6 +1,8 @@
 
 ## INSTALLED WITH "npx create-react-app my-app"
 
+## DEPLOY WITH "npm run deploy" (https://josephkoon.github.io/qrcod/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
