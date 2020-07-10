@@ -112,7 +112,7 @@ class App extends Component {
 
 		let errorStyle = null
 		if(this.state.error){
-			errorStyle = {border:'1px solid red'}
+			errorStyle = {border:'1px solid red', backgroundColor:'rgb(255,0,0,.25)'}
 		}
 
 
@@ -123,7 +123,7 @@ class App extends Component {
 
 			<div className='row'>
 				<div style={{paddingTop:'5px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
-					<h3><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h3>
+					<h4><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h4>
 				</div>
 
 				<div className='col-sm-6'>
@@ -131,7 +131,7 @@ class App extends Component {
 					<br/>
 
 					<p>Paste a Link (Up to 900 Characters)</p>
-					<input style={errorStyle} placeholder='Required' className='form-control' onChange={this.changeData.bind(this)}/>
+					<input style={errorStyle} placeholder='Link...' className='form-control' onChange={this.changeData.bind(this)}/>
 
 					<br/>
 					<br/>
@@ -166,7 +166,7 @@ class App extends Component {
 					<br/>
 
 					<hr/>
-					<button className='btn btn-lg btn-block btn-primary' onClick={this.getQR.bind(this)}>CREATE MY QR !</button>
+					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>CREATE MY QR !</button>
 					<br/>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
