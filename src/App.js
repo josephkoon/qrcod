@@ -172,6 +172,7 @@ class App extends Component {
 
 				<div style={{textAlign:'center'}} className='col-sm-8'>
 					<br/>
+					<br/>
 
 					{!this.state.qr &&
 						<div style={{width:'100%'}}>
@@ -185,8 +186,7 @@ class App extends Component {
 						<img src={this.state.qr} />
 						<br/>
 						<br/>
-						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab <i style={{fontSize:'14px'}} className="fas fa-external-link-alt"></i></button>
-						<p>(Test with a Camera App)</p>
+						<button className='btn btn-sm btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab <i style={{fontSize:'14px'}} className="fas fa-external-link-alt"></i></button>
 					</div>
 					}
 					<br/>
