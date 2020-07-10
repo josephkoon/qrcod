@@ -11,7 +11,7 @@ class App extends Component {
 		this.state = {
 			qr:null,
 
-			size:'250x250',
+			size:'250',
 			color:'0-0-0',
 			data:'',
 
@@ -26,7 +26,7 @@ class App extends Component {
 			return
 		}
 
-		let size = this.state.size
+		let size = this.state.size + 'x' + this.state.size
 		let data = this.state.data
 		let color = this.state.color
 		let format = "png"
@@ -43,7 +43,7 @@ class App extends Component {
 
 
 	openTab() {
-		let size = this.state.size
+		let size = this.state.size + 'x' + this.state.size
 		let data = this.state.data
 		let color = this.state.color
 		let format = "png"
@@ -131,8 +131,8 @@ class App extends Component {
 						{this.state.size}
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<a onClick={()=>this.changeSize('250x250')} class="dropdown-item" href="#">250x250</a>
-							<a onClick={()=>this.changeSize('500x500')} class="dropdown-item" href="#">500x500</a>
+							<a onClick={()=>this.changeSize('250')} class="dropdown-item" href="#">250x250</a>
+							<a onClick={()=>this.changeSize('500')} class="dropdown-item" href="#">500x500</a>
 						</div>
 					</div>
 
@@ -164,6 +164,11 @@ class App extends Component {
 
 				<div style={{textAlign:'center'}} className='col-sm-6'>
 					<br/>
+					{!this.state.qr &&
+						<div style={{width:'100%'}}>
+							<div style={{display:'inline-block', height:this.state.size+'px', width:this.state.size+'px', border:'4px dashed black'}}></div>
+						</div>
+					}
 					{this.state.qr &&
 					<div>
 						<img src={this.state.qr} />
