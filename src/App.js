@@ -127,7 +127,7 @@ class App extends Component {
 
 					<p>Size (In Pixels)</p>
 					<div class="dropdown show">
-						<a  style={{minWidth:'200px'}} class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a  style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{this.state.size}
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -141,7 +141,7 @@ class App extends Component {
 					
 					<p>Color</p>
 					<div class="dropdown show">
-						<a style={{minWidth:'200px'}} class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{this.state.color}
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -155,7 +155,7 @@ class App extends Component {
 					<br/>
 
 					<hr/>
-					<button className='btn btn-lg btn-block btn-primary' onClick={this.getQR.bind(this)}>GENERATE MY QR !</button>
+					<button className='btn btn-lg btn-block btn-dark' onClick={this.getQR.bind(this)}>GENERATE MY QR !</button>
 					<br/>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
@@ -174,7 +174,7 @@ class App extends Component {
 						<img src={this.state.qr} />
 						<br/>
 						<br/>
-						<button style={{border:'1px solid black'}} className='btn btn-default' onClick={this.openTab.bind(this)}>Open in Separate Tab</button>
+						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in Separate Tab</button>
 						<p>( Test with Camera App )</p>
 					</div>
 					}
