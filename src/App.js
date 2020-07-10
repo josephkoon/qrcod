@@ -141,18 +141,18 @@ class App extends Component {
 					<br/>
 					<br/>
 
-					<p>Paste a Link*</p>
+					<p>Paste Any Link</p>
 					<input style={errorStyle} placeholder='Link...' className='form-control' onChange={this.changeData.bind(this)}/>
 
 					<br/>
 					<br/>
 					
-					<p>Pick a Code Color</p>
+					<p>Pick a Color</p>
 					<div class="dropdown show">
-						<a style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="btn btn-block btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{this.state.color}
 						</a>
-						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<div style={{minWidth:'100%'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-0')} class="dropdown-item" href="#">0-0-0 (Black)</span>
 							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('255-0-0')} class="dropdown-item" href="#">255-0-0 (Red)</span>
 							<span style={{cursor:'pointer'}} onClick={()=>this.changeColor('0-0-255')} class="dropdown-item" href="#">0-0-255 (Blue)</span>
@@ -162,9 +162,8 @@ class App extends Component {
 					<br/>
 					<br/>
 
-					<hr/>
 					<br/>
-					<button className='btn btn-dark btn-block' onClick={this.getQR.bind(this)}>GENERATE !!</button>
+					<button className='btn btn-lg btn-dark btn-block' onClick={this.getQR.bind(this)}>GENERATE !!</button>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
 				</div>
@@ -176,7 +175,7 @@ class App extends Component {
 
 					{!this.state.qr &&
 						<div style={{width:'100%'}}>
-							<div style={{display:'inline-block', height:'300px', width:'300px', border:'3px dashed black'}}></div>
+							<div style={{display:'inline-block', height:'300px', width:'300px', borderRadius:'12px', border:'3px dashed black'}}></div>
 							<br/>
 						</div>
 					}
@@ -204,6 +203,12 @@ class App extends Component {
 					<h4><strong>USE CASES</strong></h4>
 				</div>
 
+
+				<div className='col-sm-4'>
+					<img style={{objectFit:'cover', height:'150px', width:'100%'}} src={menu} />
+					<p>Touch-Free Digital Menus</p>
+				</div>
+
 				<div className='col-sm-4'>
 					<img style={{objectFit:'cover', height:'150px', width:'100%'}} src={coupon} />
 					<p>Scannable Coupons</p>
@@ -214,10 +219,6 @@ class App extends Component {
 					<p>Instant Real Estate Tours</p>
 				</div>
 
-				<div className='col-sm-4'>
-					<img style={{objectFit:'cover', height:'150px', width:'100%'}} src={menu} />
-					<p>Touch-Free Digital Menus</p>
-				</div>
 			</div>
 			</div>
 
