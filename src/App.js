@@ -128,26 +128,26 @@ class App extends Component {
 
 
 			<div style={{width:'100%', textAlign:'center'}}>
-				<i style={{padding:'20px', fontSize:'50px', color:'white'}} className="fas fa-qrcode"></i>
+				<i style={{padding:'20px', fontSize:'40px', color:'white'}} className="fas fa-qrcode"></i>
 			</div>
 
 
-			<div style={{borderRadius:'10px', backgroundColor:'white'}} className='container'>
+			<div style={{borderRadius:'12px', backgroundColor:'white'}} className='container'>
 			<div style={{padding:'10px'}} className='row'>
 				<div style={{borderBottom:'1px solid lightgray', paddingTop:'10px', paddingBottom:'10px', color:'black'}} className='col-12'>
-					<h4>CREATE A QR CODE</h4>
+					<h4><strong>CREATE A QR CODE</strong></h4>
 				</div>
 				<div className='col-sm-4'>
 					<br/>
 					<br/>
 
-					<p>Paste a Link *</p>
+					<p>Paste a Link*</p>
 					<input style={errorStyle} placeholder='Link...' className='form-control' onChange={this.changeData.bind(this)}/>
 
 					<br/>
 					<br/>
 					
-					<p>Color</p>
+					<p>Pick a Code Color</p>
 					<div class="dropdown show">
 						<a style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{this.state.color}
@@ -171,7 +171,6 @@ class App extends Component {
 
 
 				<div style={{textAlign:'center'}} className='col-sm-8'>
-					<br/>
 					<br/>
 
 					{!this.state.qr &&
@@ -199,10 +198,10 @@ class App extends Component {
 			<br/>
 
 
-			<div style={{borderRadius:'10px', backgroundColor:'white'}} className='container'>
+			<div style={{borderRadius:'12px', backgroundColor:'white'}} className='container'>
 			<div style={{padding:'10px'}} className='row'>
 				<div style={{borderBottom:'1px solid lightgray', paddingTop:'10px', paddingBottom:'10px', color:'black'}} className='col-12'>
-					<h4>USE CASES</h4>
+					<h4><strong>USE CASES</strong></h4>
 				</div>
 
 				<div className='col-sm-4'>
