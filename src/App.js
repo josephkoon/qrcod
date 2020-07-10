@@ -110,7 +110,7 @@ class App extends Component {
 	render(){
 
 
-		let errorStyle = null
+		let errorStyle = {border:'1px solid gray'}
 		if(this.state.error){
 			errorStyle = {border:'1px solid red', backgroundColor:'rgb(255,0,0,.25)'}
 		}
@@ -124,10 +124,10 @@ class App extends Component {
 			<div className='row'>
 
 				<div style={{paddingTop:'6px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
-					<h4><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h4>
+					<h4><i style={{fontSize:'14px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h4>
 				</div>
 
-				<div className='col-sm-6'>
+				<div className='col-sm-4'>
 					<br/>
 					<br/>
 
@@ -175,7 +175,7 @@ class App extends Component {
 				</div>
 
 
-				<div style={{textAlign:'center'}} className='col-sm-6'>
+				<div style={{textAlign:'center'}} className='col-sm-8'>
 					<br/>
 					<br/>
 
@@ -191,8 +191,8 @@ class App extends Component {
 						<img src={this.state.qr} />
 						<br/>
 						<br/>
-						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab <i style={{fontSize:'16px'}} className="fas fa-external-link-alt"></i></button>
-						<p>( Test with Camera App )</p>
+						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab <i style={{fontSize:'14px'}} className="fas fa-external-link-alt"></i></button>
+						<p>(Test with a Camera App)</p>
 					</div>
 					}
 					
