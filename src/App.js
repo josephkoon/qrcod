@@ -40,6 +40,19 @@ class App extends Component {
 
 
 
+	changeData(e){
+		this.setState({data:e.target.value, error:''})
+	}
+
+	changeSize(value){
+		this.setState({size:value})
+	}
+
+	changeColor(value){
+		this.setState({color:value})
+	}
+
+
 
 
 	openTab() {
@@ -91,24 +104,22 @@ class App extends Component {
 
 
 
-	changeData(e){
-		this.setState({data:e.target.value})
-	}
 
-	changeSize(value){
-		this.setState({size:value})
-	}
 
-	changeColor(value){
-		this.setState({color:value})
-	}
 
 	render(){
+
+
+		let errorStyle = null
+		if(this.state.error){
+			errorStyle = {border:'1px solid red'}
+		}
+
+
 		return (
 			<div className='container'>
 			
 			<br/>
-
 
 			<div className='row'>
 				<div style={{paddingTop:'4px', backgroundColor:'black', color:'white'}} className='col-12'>
@@ -120,7 +131,7 @@ class App extends Component {
 					<br/>
 
 					<p>Paste a Link (Up to 900 Characters)</p>
-					<input placeholder='Required' className='form-control' onChange={this.changeData.bind(this)}/>
+					<input style={errorStyle} placeholder='Required' className='form-control' onChange={this.changeData.bind(this)}/>
 
 					<br/>
 					<br/>
@@ -128,11 +139,11 @@ class App extends Component {
 					<p>Size (In Pixels)</p>
 					<div class="dropdown show">
 						<a  style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{this.state.size}
+						{this.state.size}px
 						</a>
 						<div style={{minWidth:'200px'}} class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<a onClick={()=>this.changeSize('250')} class="dropdown-item" href="#">250x250</a>
-							<a onClick={()=>this.changeSize('500')} class="dropdown-item" href="#">500x500</a>
+							<a onClick={()=>this.changeSize('250')} class="dropdown-item" href="#">250px</a>
+							<a onClick={()=>this.changeSize('500')} class="dropdown-item" href="#">500px</a>
 						</div>
 					</div>
 
@@ -159,27 +170,29 @@ class App extends Component {
 					<br/>
 					<p style={{color:'red'}}>{this.state.error}</p>
 					<br/>
-
 				</div>
+
 
 				<div style={{textAlign:'center'}} className='col-sm-6'>
 					<br/>
+
 					{!this.state.qr &&
 						<div style={{width:'100%'}}>
 							<div style={{display:'inline-block', height:this.state.size+'px', width:this.state.size+'px', border:'4px dashed black'}}></div>
 						</div>
 					}
+
 					{this.state.qr &&
 					<div>
 						<img src={this.state.qr} />
 						<br/>
 						<br/>
-						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in Separate Tab</button>
+						<button className='btn btn-light' onClick={this.openTab.bind(this)}>Open in a Separate Tab</button>
 						<p>( Test with Camera App )</p>
 					</div>
 					}
-
 				</div>
+
 
 			</div>
 			</div>
