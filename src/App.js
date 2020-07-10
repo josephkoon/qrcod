@@ -122,7 +122,7 @@ class App extends Component {
 			<br/>
 
 			<div className='row'>
-				<div style={{paddingTop:'5px', backgroundColor:'black', color:'white'}} className='col-12'>
+				<div style={{paddingTop:'5px', borderBottom:'4px solid teal', backgroundColor:'black', color:'white'}} className='col-12'>
 					<h2><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h2>
 				</div>
 
