@@ -130,13 +130,13 @@ class App extends Component {
 					<br/>
 					<br/>
 
-					<p>Paste a Link (Up to 900 Characters)</p>
+					<p>Paste a Link *</p>
 					<input style={errorStyle} placeholder='Link...' className='form-control' onChange={this.changeData.bind(this)}/>
 
 					<br/>
 					<br/>
 
-					<p>Size (In Pixels)</p>
+					<p>Size (Pixels)</p>
 					<div class="dropdown show">
 						<a  style={{minWidth:'200px'}} class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{this.state.size}px
