@@ -4,6 +4,69 @@
 ## DEPLOY WITH "npm run deploy" (https://josephkoon.github.io/qrcod/)
 
 
+
+## NEXT FEATURES
+> Add ‘Scan Me’ Frame
+> Simplify User Flow 
+> Add different ‘types’ other than URL
+> Add Download JPG / PNG
+
+Redirect link 
+Track location / number of scans 
+
+Add text label (Scan me!) 
+
+Export as PDF
+Export as Email [Text?]
+
+Automatic layout 8x, 16x on a page
+
+Upload image 
+Upload video
+Upload form
+
+
+
+
+OTHER FEATURES
+Download SVG / EPS
+Transparent / White BG
+Layout on a print page
+
+Change Shape / Color
+Add Logo
+
+URL
+Plain Text
+Send Email
+Send Event
+Send SMS
+Send Tweet
+Send Phone #
+Location 
+Wifi Login
+Bitcoin Amount
+V Card [?]
+
+Venmo, Instagram, FB, Tik Tok, Linkedin, Snapchat, Twitter, Spotify, YouTube
+
+Facebook Like [Paid]
+Display uploaded PDF [Paid]
+Share Music [Paid]
+Link to App Store [Paid]
+Link to Images [Paid]
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

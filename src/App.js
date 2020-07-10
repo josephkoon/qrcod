@@ -122,7 +122,8 @@ class App extends Component {
 			<br/>
 
 			<div className='row'>
-				<div style={{paddingTop:'5px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
+
+				<div style={{paddingTop:'6px', borderBottom:'4px solid darkgray', backgroundColor:'black', color:'white'}} className='col-12'>
 					<h4><i style={{fontSize:'16px'}} className="fas fa-qrcode"></i> QR CODE GENERATOR</h4>
 				</div>
 
@@ -192,6 +193,8 @@ class App extends Component {
 						<p>( Test with Camera App )</p>
 					</div>
 					}
+					
+					<br/>
 				</div>
 
 
